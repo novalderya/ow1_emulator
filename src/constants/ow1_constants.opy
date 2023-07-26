@@ -253,3 +253,5 @@
 
 # Zenyatta
 #!define OW1_ZENYATTA_CLIP_SIZE 20
+
+#!define OW1_HEALING_MODIFICATION 0.001
