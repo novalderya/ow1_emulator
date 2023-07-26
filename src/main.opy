@@ -12,6 +12,6 @@
 #!include "utilities/debug.opy"
 
 # Custom game lobby settings
-#!include "lobby_settings.opy"
+#!include "../lobby_settings_test.opy"
 # OW1 logic
 #!include "ow1/ow1.opy"
