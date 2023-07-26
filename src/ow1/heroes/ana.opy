@@ -41,7 +41,8 @@ rule "[ana.opy]: Heal OW1 healing with biotic grenade":
     @Event playerDealtHealing
     @Hero ana
     @Condition eventAbility == Button.ABILITY_2
-    @Condition healer == healee
-    @Condition eventAbility != 0
     
-    heal(healee, healer, eventHealing * percent(OW1_ANA_BIOTIC_GRENADE_HEALING/OW2_ANA_BIOTIC_GRENADE_HEALING) / OW1_HEALING_MODIFICATION)
+    if healer == healee :
+        heal(healee, healer, eventHealing * percent(OW1_ANA_BIOTIC_GRENADE_HEALING/OW2_ANA_BIOTIC_GRENADE_HEALING) / OW1_HEALING_MODIFICATION)
+    else : 
+        heal(healee, healer, eventHealing*(OW1_ANA_BIOTIC_GRENADE_HEALING/OW2_ANA_BIOTIC_GRENADE_HEALING)-eventHealing)
